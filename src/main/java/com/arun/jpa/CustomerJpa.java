@@ -1,9 +1,8 @@
-package com.arun.service;
+package com.arun.jpa;
 
 import com.arun.model.Customer;
 
-public interface CustomerService {
-    Customer getCustomer(String id);
+public interface CustomerJpa {
 
     Customer findById(String id);
 
