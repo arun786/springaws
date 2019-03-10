@@ -8,4 +8,6 @@ public interface CustomerService {
     Customer findById(String id);
 
     Customer update(Customer customer);
+
+    void deleteById(Integer id);
 }

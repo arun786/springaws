@@ -20,7 +20,6 @@ public class CustomerController {
 
     @GetMapping("customer/v1/customer/{id}")
     public ResponseEntity<Customer> getCustomerBasebOnId(@PathVariable String id) {
-
         return new ResponseEntity<>(customerService.getCustomer(id), HttpStatus.OK);
     }
 
@@ -35,4 +34,12 @@ public class CustomerController {
         Customer customerUpdated = customerService.update(customer);
         return new ResponseEntity<>(customerUpdated, HttpStatus.OK);
     }
+
+    @PutMapping("customer/v2/customer/{id}")
+    public ResponseEntity<HttpStatus> deleteByIdJpa(@PathVariable Integer id) {
+        logger.info("Request : " + id);
+        customerService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

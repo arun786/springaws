@@ -32,4 +32,9 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer update(Customer customer) {
         return customerJpa.update(customer);
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        customerJpa.deleteById(id);
+    }
 }

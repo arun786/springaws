@@ -24,4 +24,10 @@ public class CustomerJpaImpl implements CustomerJpa {
     public Customer update(Customer customer) {
         return entityManager.merge(customer);
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        Customer customer = entityManager.find(Customer.class, id);
+        entityManager.remove(customer);
+    }
 }
