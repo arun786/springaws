@@ -2,6 +2,8 @@ package com.arun.service;
 
 import com.arun.model.Customer;
 
+import java.util.List;
+
 public interface CustomerService {
     Customer getCustomer(String id);
 
@@ -10,4 +12,6 @@ public interface CustomerService {
     Customer update(Customer customer);
 
     void deleteById(Integer id);
+
+    List<Customer> getAllCustomers();
 }

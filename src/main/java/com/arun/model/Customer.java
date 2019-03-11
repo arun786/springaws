@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "customer")
 @NoArgsConstructor
+@NamedQuery(name = "List_All_Customers", query = "select c from Customer c")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
