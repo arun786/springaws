@@ -19,4 +19,9 @@ public class ItemServiceImpl implements ItemService {
     public Item createItem(Item item) {
         return itemjpa.createItem(item);
     }
+
+    @Override
+    public Item getItem(long id) {
+        return itemjpa.getItem(id);
+    }
 }

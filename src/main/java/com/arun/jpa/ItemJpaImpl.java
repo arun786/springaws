@@ -18,4 +18,9 @@ public class ItemJpaImpl implements Itemjpa {
     public Item createItem(Item item) {
         return entityManager.merge(item);
     }
+
+    @Override
+    public Item getItem(long id) {
+        return entityManager.find(Item.class, id);
+    }
 }
