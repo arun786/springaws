@@ -17,7 +17,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public Customer getCustomer(String id) {
+    public Customer getCustomer(Integer id) {
 
         String query = "select * from customer where id = :id";
 

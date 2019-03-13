@@ -18,7 +18,7 @@ public class CustomerJpaImpl implements CustomerJpa {
     EntityManager entityManager;
 
     @Override
-    public Customer findById(String id) {
+    public Customer findById(Integer id) {
         return entityManager.find(Customer.class, id);
     }
 

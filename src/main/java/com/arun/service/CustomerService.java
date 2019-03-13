@@ -5,9 +5,9 @@ import com.arun.model.Customer;
 import java.util.List;
 
 public interface CustomerService {
-    Customer getCustomer(String id);
+    Customer getCustomer(Integer id);
 
-    Customer findById(String id);
+    Customer findById(Integer id);
 
     Customer update(Customer customer);
 

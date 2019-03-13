@@ -21,12 +21,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer getCustomer(String id) {
+    public Customer getCustomer(Integer id) {
         return customerDao.getCustomer(id);
     }
 
     @Override
-    public Customer findById(String id) {
+    public Customer findById(Integer id) {
         return customerJpa.findById(id);
     }
 

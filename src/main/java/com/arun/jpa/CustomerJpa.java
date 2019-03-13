@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CustomerJpa {
 
-    Customer findById(String id);
+    Customer findById(Integer id);
 
     Customer update(Customer customer);
 

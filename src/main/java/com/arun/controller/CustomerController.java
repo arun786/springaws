@@ -21,12 +21,12 @@ public class CustomerController {
     }
 
     @GetMapping("customer/v1/customer/{id}")
-    public ResponseEntity<Customer> getCustomerBasebOnId(@PathVariable String id) {
+    public ResponseEntity<Customer> getCustomerBasebOnId(@PathVariable Integer id) {
         return new ResponseEntity<>(customerService.getCustomer(id), HttpStatus.OK);
     }
 
     @GetMapping("customer/v2/customer/{id}")
-    public ResponseEntity<Customer> findByIdJpa(@PathVariable String id) {
+    public ResponseEntity<Customer> findByIdJpa(@PathVariable Integer id) {
         logger.info("Request : " + id);
         return new ResponseEntity<>(customerService.findById(id), HttpStatus.OK);
     }
@@ -37,7 +37,7 @@ public class CustomerController {
         return new ResponseEntity<>(customerUpdated, HttpStatus.OK);
     }
 
-    @PutMapping("customer/v2/customer/{id}")
+    @DeleteMapping("customer/v2/customer/{id}")
     public ResponseEntity<HttpStatus> deleteByIdJpa(@PathVariable Integer id) {
         logger.info("Request : " + id);
         customerService.deleteById(id);
