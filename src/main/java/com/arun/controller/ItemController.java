@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class ItemController {
     private ItemService itemService;
@@ -25,5 +27,11 @@ public class ItemController {
 
         Item item = itemService.getItem(id);
         return new ResponseEntity<>(item, HttpStatus.OK);
+    }
+
+    @GetMapping("items/v1/items")
+    public ResponseEntity<List<Item>> getListOfItems() {
+        List<Item> items = itemService.getItems();
+        return new ResponseEntity<>(items, HttpStatus.OK);
     }
 }

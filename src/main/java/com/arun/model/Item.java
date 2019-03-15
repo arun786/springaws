@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "item")
+@NamedQuery(name = "LIST_OF_ITEMS", query = "select i from Item i")
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
