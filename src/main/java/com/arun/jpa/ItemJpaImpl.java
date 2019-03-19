@@ -28,7 +28,7 @@ public class ItemJpaImpl implements Itemjpa {
 
     @Override
     public List<Item> getItems() {
-        TypedQuery<Item> list_of_items = entityManager.createNamedQuery("LIST_OF_ITEMS", Item.class);
+        TypedQuery<Item> list_of_items = entityManager.createQuery("select c from Item c", Item.class);
         return list_of_items.getResultList();
     }
 }
