@@ -21,24 +21,24 @@ public class CustomerController {
     }
 
     @GetMapping("customer/v1/customer/{id}")
-    public ResponseEntity<Customer> getCustomerBasebOnId(@PathVariable Integer id) {
+    public ResponseEntity<Customer> getCustomerBasebOnId(@PathVariable Long id) {
         return new ResponseEntity<>(customerService.getCustomer(id), HttpStatus.OK);
     }
 
     @GetMapping("customer/v2/customer/{id}")
-    public ResponseEntity<Customer> findByIdJpa(@PathVariable Integer id) {
+    public ResponseEntity<Customer> findByIdJpa(@PathVariable Long id) {
         logger.info("Request : " + id);
         return new ResponseEntity<>(customerService.findById(id), HttpStatus.OK);
     }
 
     @PostMapping("customer/v2/customer")
-    public ResponseEntity<Customer> insertACustomer(@RequestBody Customer customer) {
-        Customer customerUpdated = customerService.update(customer);
+    public ResponseEntity<Customer> insertOrUpdateACustomer(@RequestBody Customer customer) {
+        Customer customerUpdated = customerService.save(customer);
         return new ResponseEntity<>(customerUpdated, HttpStatus.OK);
     }
 
     @DeleteMapping("customer/v2/customer/{id}")
-    public ResponseEntity<HttpStatus> deleteByIdJpa(@PathVariable Integer id) {
+    public ResponseEntity<HttpStatus> deleteByIdJpa(@PathVariable Long id) {
         logger.info("Request : " + id);
         customerService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);

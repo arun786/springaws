@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface CustomerJpa {
 
-    Customer findById(Integer id);
+    Customer findById(Long id);
 
-    Customer update(Customer customer);
+    Customer save(Customer customer);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     List<Customer> getAllCustomers();
 }

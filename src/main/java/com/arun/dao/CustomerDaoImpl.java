@@ -17,7 +17,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public Customer getCustomer(Integer id) {
+    public Customer getCustomer(Long id) {
 
         String query = "select * from customer where id = :id";
 
@@ -25,7 +25,7 @@ public class CustomerDaoImpl implements CustomerDao {
         mapSqlParameterSource.addValue("id", id);
         return namedParameterJdbcTemplate.queryForObject(query, mapSqlParameterSource, (rs, rw) -> {
             Customer customer = new Customer();
-            customer.setId(rs.getInt("id"));
+            customer.setId(rs.getLong("id"));
             customer.setFirstName(rs.getString("first_name"));
             customer.setLastName(rs.getString("last_name"));
             customer.setEmail(rs.getString("email"));

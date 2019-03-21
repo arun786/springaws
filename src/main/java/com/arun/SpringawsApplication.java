@@ -15,10 +15,10 @@ public class SpringawsApplication extends SpringBootServletInitializer {
      * step 3 change the jar file to war file in pom
      */
 
-//    @Override
-//    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-//        return builder.sources(SpringawsApplication.class);
-//    }
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(SpringawsApplication.class);
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(SpringawsApplication.class, args);

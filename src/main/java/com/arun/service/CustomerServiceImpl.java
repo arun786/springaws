@@ -21,22 +21,22 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer getCustomer(Integer id) {
+    public Customer getCustomer(Long id) {
         return customerDao.getCustomer(id);
     }
 
     @Override
-    public Customer findById(Integer id) {
+    public Customer findById(Long id) {
         return customerJpa.findById(id);
     }
 
     @Override
-    public Customer update(Customer customer) {
-        return customerJpa.update(customer);
+    public Customer save(Customer customer) {
+        return customerJpa.save(customer);
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         customerJpa.deleteById(id);
     }
 

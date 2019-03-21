@@ -5,13 +5,13 @@ import com.arun.model.Customer;
 import java.util.List;
 
 public interface CustomerService {
-    Customer getCustomer(Integer id);
+    Customer getCustomer(Long id);
 
-    Customer findById(Integer id);
+    Customer findById(Long id);
 
-    Customer update(Customer customer);
+    Customer save(Customer customer);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     List<Customer> getAllCustomers();
 }

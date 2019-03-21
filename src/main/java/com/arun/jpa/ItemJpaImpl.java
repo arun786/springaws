@@ -26,6 +26,11 @@ public class ItemJpaImpl implements Itemjpa {
         return entityManager.find(Item.class, id);
     }
 
+    /**
+     * Use of Typed Query
+     *
+     * @return
+     */
     @Override
     public List<Item> getItems() {
         TypedQuery<Item> list_of_items = entityManager.createQuery("select c from Item c", Item.class);
