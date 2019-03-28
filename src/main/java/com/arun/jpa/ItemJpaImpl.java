@@ -2,6 +2,7 @@ package com.arun.jpa;
 
 import com.arun.model.Item;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -13,6 +14,7 @@ import java.util.List;
 @Transactional
 public class ItemJpaImpl implements Itemjpa {
 
+    @Qualifier("awsEntityManagerFactory")
     @Autowired
     private EntityManager entityManager;
 
