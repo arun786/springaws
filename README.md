@@ -25,7 +25,7 @@ the port as 5000 in application.properties.
 
     We need to create Application first 
     
-    ![Screenshot](ElasticBeanStalkApplication.JPG)
+    ![ElasticBeanStalkApplication](https://user-images.githubusercontent.com/23618238/56089384-bcd04c00-5e46-11e9-85e4-9ae3ae287941.JPG)
 
 Route53 DNS name : myspringbootaws.de
 
