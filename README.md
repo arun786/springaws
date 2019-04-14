@@ -21,6 +21,13 @@ we can choose port of our choice, if we want the spring boot application to be d
 the port as 5000 in application.properties.
 5. Use Elastic Bean Stalk, to deploy the war file to aws.
 
+## Details of RDS MySQL Database configured in Spring boot application using application.properties
+
+    spring.datasource.jdbc-url=jdbc:mysql://springonaws-db.clg2pp3loljk.us-west-1.rds.amazonaws.com:3306/web_customer_tracker
+    spring.datasource.username=
+    spring.datasource.password=
+    spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+     
 ## Elastic Bean Stalk
 
     1. Via AWS Console, go to Elastic Bean Stalk.
