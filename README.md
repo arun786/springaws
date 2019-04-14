@@ -29,7 +29,8 @@ Different URL's which can be accessed via Rest API is as below.
 
 Http Method : Get.
 
-Sample url : [myspringbootaws.de/customer/v2/customer/12]{myspringbootaws.de/customer/v2/customer/12}
+Sample url : 
+[myspringbootaws.de/customer/v2/customer/12](myspringbootaws.de/customer/v2/customer/12)
 
 12 is the Id.
 
