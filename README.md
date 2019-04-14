@@ -1,11 +1,11 @@
-# spring Boot aws
+# Spring Boot application deployed in AWS as a Jar file or War file
 
 This project is about developing Spring Boot Rest Service Project using the below
 
 1. Spring Boot 2.0
 2. Spring JPA
 3. AWS RDS mysql
-4. Deployment using aws Elastic BeanStalk
+4. Deployment using AWS Elastic BeanStalk
 5. AWS Route53
 
 
@@ -23,9 +23,14 @@ the port as 5000 in application.properties.
 
 ## Elastic Bean Stalk
 
-    We need to create Application first 
+    1. We need to create Application first
+    2. Once Application is created, we create an Environment using Select Environment tier.
+    3. We get 2 options
+        1. Web Server Environment
+        2. Worker Environment
+    4. Select the Web Server Environment.
+    5. Add the necessary details and in the Application Code. There will be an option of upload your code. Upload the war or jar file.
     
-    ![ElasticBeanStalkApplication](https://user-images.githubusercontent.com/23618238/56089384-bcd04c00-5e46-11e9-85e4-9ae3ae287941.JPG)
 
 Route53 DNS name : myspringbootaws.de
 
@@ -49,6 +54,9 @@ The response will be as below.
         "lastName": "Dravid",
         "email": "rahulDr@gmail.com"
     }
+
+--to be continued 
+
 
 
 Development of Spring Boot Application using JPA.
