@@ -21,6 +21,12 @@ we can choose port of our choice, if we want the spring boot application to be d
 the port as 5000 in application.properties.
 5. Use Elastic Bean Stalk, to deploy the war file to aws.
 
+## Elastic Bean Stalk
+
+    We need to create Application first 
+    
+    ![Screenshot](ElasticBeanStalkApplication.JPG)
+
 Route53 DNS name : myspringbootaws.de
 
 Different URL's which can be accessed via Rest API is as below.
