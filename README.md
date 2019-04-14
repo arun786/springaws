@@ -23,14 +23,16 @@ the port as 5000 in application.properties.
 
 ## Elastic Bean Stalk
 
-    1. We need to create Application first
-    2. Once Application is created, we create an Environment using Select Environment tier.
+    1. Via AWS Console, go to Elastic Bean Stalk.
+    2. Create an Application
+    2. Once Application is created, create an Environment using Select Environment tier.
     3. We get 2 options
         1. Web Server Environment
         2. Worker Environment
     4. Select the Web Server Environment.
     5. Add the necessary details and in the Application Code. There will be an option of upload your code. Upload the war or jar file.
     
+Details of API.
 
 Route53 DNS name : myspringbootaws.de
 
