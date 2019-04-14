@@ -1,4 +1,4 @@
-# springaws
+# spring Boot aws
 
 This project is about developing Spring Boot Rest Service Project using the below
 
@@ -23,13 +23,13 @@ the port as 5000 in application.properties.
 
 Route53 DNS name : myspringbootaws.de
 
-Different URL's which can be accessed the Rest API is as below.
+Different URL's which can be accessed via Rest API is as below.
 
 1. Get Service - This will get data from AWS RDS tables based on Id.
 
 Http Method : Get.
 
-Sample url : myspringbootaws.de/customer/v2/customer/12
+Sample url : [myspringbootaws.de/customer/v2/customer/12]{myspringbootaws.de/customer/v2/customer/12}
 
 12 is the Id.
 
