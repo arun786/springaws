@@ -1,4 +1,4 @@
-# Spring Boot application deployed in AWS as a Jar file or War file
+# Spring Boot application deployed in AWS as a Jar file or War file using Elastic Bean Stalk
 
 This project is about developing Spring Boot Rest Service Project using the below
 
